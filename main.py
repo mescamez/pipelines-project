@@ -1,6 +1,5 @@
 from argparse import ArgumentParser
 from Src.songdata import lyrics
-from Src.image import getimage
 from Src.PDF import createPDF
 
 def parse():
@@ -14,9 +13,8 @@ def main():
     artist = args.artist
     song = args.song
     infoSong = (lyrics(artist, song))
-    image = getimage
     if type(infoSong)==str:
-        createPDF(infoSong, song, artist, image)
+        createPDF(infoSong, song, artist)
 
 if __name__ == '__main__':
     main()

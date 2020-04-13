@@ -1,7 +1,7 @@
 from fpdf import FPDF
 import webbrowser as wb
 
-def createPDF(infoSong, song, artist, image):
+def createPDF(infoSong, song, artist):
     pdf = FPDF()
     pdf.add_page()
 
@@ -9,8 +9,6 @@ def createPDF(infoSong, song, artist, image):
     pdf.set_font('Arial', 'B', 22)
     title_text = song
     title_text1 = artist
-    album_image = image
-    pdf.image(album_image, 10, 8, 33)
     pdf.cell(180, 10, title_text,0,1,'C')
     pdf.cell(180, 10, title_text1, 0,1, 'C')
 
@@ -27,5 +25,5 @@ def createPDF(infoSong, song, artist, image):
     #Generate PDF
     pdf.output('../pipelines-project/Output/music.pdf', 'F')
     return wb.open_new('../pipelines-project/Output/music.pdf')
-    
+
    
