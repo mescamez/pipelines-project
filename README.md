@@ -1,4 +1,5 @@
-# PIPELINES PROJECT
+# PIPELINES PROJECT ![img]("../pipelines-project/Input/iTunes.png)
+
 In this project the program returns information about a song based on two variables: artist and song.
 For that, we obtained te information from two sources that we detail below:
 ## 1. CSV file:
@@ -8,5 +9,4 @@ To search for content, we must create a search field that passes a fully-qualifi
 
 #
 With this information, and given an artist and a song, the program returns the lyrics of the song, the price of the song in iTunes, the album it belongs to and the price of the album.
-
 
