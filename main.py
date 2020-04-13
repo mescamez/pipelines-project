@@ -1,6 +1,6 @@
 from argparse import ArgumentParser
-from songdata import lyrics
-from PDF import createPDF
+from Src.songdata import lyrics
+from Src.PDF import createPDF
 
 
 def parse():

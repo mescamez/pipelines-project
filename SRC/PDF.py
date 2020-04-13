@@ -11,34 +11,16 @@ def createPDF(infoSong):
 
     #Image
     pdf.ln(h = 10)
-    pdf.image('iTunes.png', 10, 8, 33)
-    #pdf.set_font('Arial', 'U', 16)
-    #pdf.cell(80, 10, 'Lyric')
+    pdf.image('../pipelines-project/Input/iTunes.png', 10, 8, 33)
 
-    #Artist
+    #Body
     pdf.ln(h = 10)
-    #pdf.set_font('Arial', 'U', 16)
-    #pdf.cell(80, 10, 'Artist')
-    pdf.set_font('Arial','', 8)
+    pdf.set_font('Arial','', 12)
     text = infoSong
-    pdf.cell(80, 10, text)
+    pdf.multi_cell(190.0, 10.0, text, 'J', False)
      
     #Generate PDF
-    pdf.output('music.pdf', 'F')
-    return wb.open_new('music.pdf')
+    pdf.output('../pipelines-project/Output/music.pdf', 'F')
+    return wb.open_new('../pipelines-project/Output/music.pdf')
     
-"""
-#Song
-#pdf.ln(h = 10)
-pdf.set_font('Arial', 'U', 16)
-pdf.cell(80, 10, 'Song')
-pdf.set_font('Arial','I', 16)
-#pdf.cell(0, 10, 'Rolling in the deep')
-
-#Album
-pdf.ln(h = 10)
-pdf.set_font('Arial', 'U', 16)
-pdf.cell(80, 10, 'Album')
-
-"""
    

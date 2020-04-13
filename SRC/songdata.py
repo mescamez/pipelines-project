@@ -1,6 +1,5 @@
 import pandas as pd
-from iTunes import getFromiTunes
-from IPython.display import Image
+from Src.iTunes import getFromiTunes
 
 df = pd.read_csv("../data/songdata_clean.csv", encoding="latin-1")
 
