@@ -1,7 +1,7 @@
 import pandas as pd
 from Src.iTunes import getFromiTunes
 
-df = pd.read_csv("../data/songdata_clean.csv", encoding="latin-1")
+df = pd.read_csv("../pipelines-project/Output/songdata_clean.csv", encoding="latin-1")
 
 def lyrics (artist, song):
     if (artist in list(df["artist"]))==False:
