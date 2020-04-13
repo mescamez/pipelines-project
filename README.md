@@ -1,4 +1,4 @@
-# PIPELINES PROJECT ![img]("../pipelines-project/Input/iTunes.png)
+# ![PIPELINES PROJECT]("https://github.com/mescamez/pipelines-project/blob/master/InPut/iTunes.png)
 
 In this project the program returns information about a song based on two variables: artist and song.
 For that, we obtained te information from two sources that we detail below:
