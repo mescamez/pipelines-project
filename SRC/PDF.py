@@ -1,13 +1,18 @@
 from fpdf import FPDF
 import webbrowser as wb
 
-def createPDF(infoSong):
+def createPDF(infoSong, song, artist, image):
     pdf = FPDF()
     pdf.add_page()
 
     #Title
     pdf.set_font('Arial', 'B', 22)
-    pdf.cell(180, 10, 'Song Info',0,1,'C')
+    title_text = song
+    title_text1 = artist
+    album_image = image
+    pdf.image(album_image, 10, 8, 33)
+    pdf.cell(180, 10, title_text,0,1,'C')
+    pdf.cell(180, 10, title_text1, 0,1, 'C')
 
     #Image
     pdf.ln(h = 10)

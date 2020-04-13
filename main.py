@@ -1,7 +1,7 @@
 from argparse import ArgumentParser
 from Src.songdata import lyrics
+from Src.image import getimage
 from Src.PDF import createPDF
-
 
 def parse():
     parser = ArgumentParser(description="This program give you the lyrics of a song and aditional information as price, album's name, album's price")
@@ -14,8 +14,9 @@ def main():
     artist = args.artist
     song = args.song
     infoSong = (lyrics(artist, song))
-    createPDF(infoSong)
-
+    image = getimage
+    if type(infoSong)==str:
+        createPDF(infoSong, song, artist, image)
 
 if __name__ == '__main__':
     main()
